@@ -95,3 +95,6 @@ git reset --hard HEAD~
 
 ## ignore tmp files
 git update-index --assume-unchanged FILE_NAME
+
+# grep before commit!
+git grep 'pw' .
