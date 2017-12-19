@@ -35,3 +35,24 @@ ffmpeg -r 15 -i filename.%04d.png -vb 20M -f flv mt.flv
 # compress pdf 
 pdf2ps 12th.pdf 12th.ps
 ps2pdf 12th.ps 12th.pdf
+
+# convert to png
+
+	#!/bin/bash
+
+	fh=$1
+
+	mkdir -p plots/
+	#fn=$(basename $fh ".pdf")
+	fn=$(basename ${fh%.*}) 
+
+	if [ ! -f "plots/"$fn".png" ]; then
+		cp $fh "plots/"
+		if [[ "${fh##*.}" != "png" ]]; then
+			convert -density 300 -trim $fh -quality 100 "plots/"$fn".png"
+		fi
+	fi
+
+	# mkdir -p SI_data/
+	# -resize 800 
+	# -verbose 
