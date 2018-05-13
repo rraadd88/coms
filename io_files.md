@@ -37,12 +37,15 @@ for file in *; do mv "$file" `echo $file | tr ':' '_'` ; done
 
 ls -1 | while read file; do new_file=$(echo $file | sed s/\ //g); mv "$file" "$new_file"; done
 
-find -name "* *" -type d | rename 's/ /_/g'    # do the directories first
+# rename dir and files 
+## remove spaces
 
+find -name "* *" -type d | rename 's/ /_/g'
 find -name "* *" -type f | rename 's/ /_/g'
+
+find -name "*(*" -type f | rename 's/\(/_/g'
+find -name "*)*" -type f | rename 's/\)/_/g'
 find -name "*-*" -type f | rename 's/-/_/g'
-find -name "*(*" -type f | rename 's/(/_/g'
-find -name "*)*" -type f | rename 's/)/_/g'
 find -name "*'*" -type f | rename 's/'/_/g'
 find -name "*,*" -type f | rename 's/,/_/g'
 find -name "*!*" -type f | rename 's/!/_/g'
@@ -51,6 +54,15 @@ find -name "*"*" -type f | rename 's/"/_/g'
 find -name "***" -type f | rename 's/*/_/g'
 find -name "*>*" -type f | rename 's/>/_/g'
 find -name "*:*" -type f | rename 's/:/_/g'
+
+## replace filenames with numbers
+
+ls | cat -n | while read n f; do mv "$f" "$n.extension"; done
+
+eg. 1st 3 keep chars
+
+# gzip *
+ls *.gz | cat -n | while read n f; do mv "$f" ${f:0:3}"$n.gz"; done
 
 # backup
 
