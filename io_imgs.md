@@ -7,8 +7,11 @@ scrot -s test.png
 # convert: jpg to pdf
 convert -compress jpeg passbook.jpg passbook.pdf
 
-# convert: append images
+# convert: append images vertically
 convert -append 2.png 1.png out.png
+
+# convert: append images horizontally
+convert +append 2.png 1.png out.png
 
 # convert: make gif
 convert -delay 100 -loop 0 2016102* output.gif
