@@ -56,3 +56,14 @@ ps2pdf 12th.ps 12th.pdf
 	# mkdir -p SI_data/
 	# -resize 800 
 	# -verbose 
+
+# check the format of the images
+for f in *.tif; do identify -ping -format '%w %h %[channels]\n' "$f"; done
+# all
+for f in *.tif; do identify "$f"; done
+
+# convert to 300dpi, max 2000px width, no alpha,
+for f in *.svg; do convert -density 300 -alpha off -resize '2000' "$f" "${f%%.*}.tif"; done
+
+# compress
+for f in *.svg; do convert -density 300 -alpha off -resize '2000' -compress lzw "$f" "${f%%.*}.tif"; done
