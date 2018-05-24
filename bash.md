@@ -15,11 +15,6 @@ sudo service lightdm restart
 to restart network
 sudo service network-manager restart\n\n DKMS: (If next boot fails, revert to initrd.img-4.4.0-75-generic.old-dkms image)
 
-# tablet
-scp -P XX XX.png tablet@192.168.XX.XX:/XX/
-
-# wget folder only 
-wget -r -np -nH /path/
 
 # autoupdate log
 tail -f XX.log
@@ -31,17 +26,6 @@ sudo netstat -taupen | grep ssh
 # make global
 sudo chmod +x
 cp usr/local/bin
-
-# download all subpages 
-wget --mirror -p --convert-links -P ./LOCAL-DIR WEBSITE-URL
-
-–mirror : turn on options suitable for mirroring.
-
--p : download all files that are necessary to properly display a given HTML page.
-
-–convert-links : after the download, convert the links in document for local viewing.
-
--P ./LOCAL-DIR : save all the files and directories to the specified directory.
 
 # open java
 javaws strucalign.jnlp
