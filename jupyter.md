@@ -6,6 +6,10 @@ ipython notebook --no-browser --port=7000
 
 ssh -N -f -L localhost:7000:localhost:7000 name@192.168.XX.XX
 
+# through server
+
+ssh -NfL 8888:localhost:8888 machineA.com ssh -NfL 8888:localhost:8888 machineB.com
+
 # Now you can access the notebook by directing your browser to:
 
 localhost:7000
