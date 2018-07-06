@@ -82,3 +82,10 @@ To SSH into the guest VM, write:
 
 ssh -p 3022 user@127.0.0.1
 Where user is your username within the VM.
+
+# system wide execute a script
+echo "alias shortcutname='/path/to/script'" >> ~/.bashrc
+
+# more system wide (for usage through python scripts)
+sudo cp localscript /usr/local/bin/
+
