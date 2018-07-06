@@ -41,6 +41,10 @@ sudo purge-ppa ppaname
 
 sudo service network-manager restart
 
+# start VPN session
+
+sudo openconnect vpn.domain.name
+
 # install 
 
 Install an RPM Package on Ubuntu Linux
