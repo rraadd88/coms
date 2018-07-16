@@ -21,7 +21,12 @@ conda env create --force -f 1_dms.yml
 
 conda env remove --name 1_dms
 
+# clone env
+
+conda create --name myclone --clone myenv
+
 # rename env
 
 conda create --name new_name --clone old_name
+
 conda remove --name old_name --all # or its alias: `conda env remove --name old_name`
