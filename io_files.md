@@ -77,3 +77,11 @@ find . -type f -size +3000000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 # rsync: one-directional forced
 
 rsync -avv XX/from XX/to
+
+# copy directory structure sans files
+
+find . -type d >dirs.txt
+to create the list of directories, then
+
+xargs mkdir -p <dirs.txt
+to create the directories on the destination.
