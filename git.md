@@ -80,7 +80,7 @@ git push
 ##bump version no. in the setup.py
 git add setup.py
 git commit -m "version bump"
-git push
+git push origin master
 git tag -a v$(python setup.py --version) -m "http://kc-lab.github.io/dms2dfe/v1.0.6/html/"
 git push --tags
 
