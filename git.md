@@ -81,7 +81,7 @@ git push
 git add setup.py
 git commit -m "version bump"
 git push origin master
-git tag -a v$(python setup.py --version) -m "http://kc-lab.github.io/dms2dfe/v1.0.6/html/"
+git tag -a v$(python setup.py --version) -m "Update"
 git push --tags
 
 ##rewrite old tags

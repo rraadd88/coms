@@ -6,16 +6,25 @@ sudo apt-get update
 sudo apt install rtbth-dkms
 
 # install dependencies control
-sudo apt-get install bluetooth bluez bluez-tools rfkill
+sudo apt-get install bluetooth bluez bluez-tools rfkill blueman
 
 # pulseaudio
 ## This may be due to the pulseaudio-bluetooth-module package not being installed. Install it if it missing, 
 sudo apt install pulseaudio-module-bluetooth
 
+
+sudo nano /etc/bluetooth/main.conf
+# add "AutoEnable=true"
+
+sudo modprobe rtbth
+sudo rfkill unblock bluetooth
+bluetoothctl
+sudo rfkill unblock bluetooth
+pulseaudio -k
+pulseaudio --start
 # turn on
 sudo modprobe rtbth
 sudo rfkill unblock bluetooth
-
 
 # manager application
 bluetoothctl
@@ -30,6 +39,10 @@ bluetoothctl
 ## then restart pulseaudio.
 pulseaudio -k  
 pulseaudio --start  
+
+# to restart session
+sudo service bluetooth restart  
+killall pulseaudio  
 
 # If the issue is not due to the missing package, the problem in this case is that PulseAudio is not catching up. A common solution to this problem is to restart PulseAudio. Note that it is perfectly fine to run bluetoothctl as root while PulseAudio runs as user. After restarting PulseAudio, retry to connect. It is not necessary to repeat the pairing.
 
