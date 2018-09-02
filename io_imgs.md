@@ -69,6 +69,9 @@ for f in *.tif; do identify -ping -format '%w %h %[channels]\n' "$f"; done
 ## all details (NOT RELIABLE, check in gimp to be sure)
 for f in *.tif; do identify "$f"; done
 
+## for bigger vector files   
+inkscape -z in.svg -e out.png
+
 # TIF (NOT RELIABLE, do in gimp to be sure)
 ## compress 
 for f in *.svg; do convert -density 300 -alpha off -resize '2000' -compress lzw "$f" "${f%%.*}.tif"; done
