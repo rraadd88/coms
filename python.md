@@ -14,3 +14,7 @@ pip freeze
 
 # install all packages from a list at once
 pip install -r requirements.txt
+
+# Troubleshoot  
+## SSL errors, certificate invalid  
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org package  
