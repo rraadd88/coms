@@ -1,12 +1,12 @@
 # tablet
 scp -P XX XX.png tablet@192.168.XX.XX:/XX/
 
+# wget ftp to a directory 
+wget -x -nH ftp://ftp -P destination
+
 # wget folder only 
 wget -r -np -nH /path/
 
-# wget ftp to a directory 
-
-wget -x -nH ftp://ftp -P <destination>
 
 # download all subpages 
 wget --mirror -p --convert-links -P ./LOCAL-DIR WEBSITE-URL
