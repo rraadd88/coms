@@ -30,3 +30,16 @@ conda create --name myclone --clone myenv
 conda create --name new_name --clone old_name
 
 conda remove --name old_name --all # or its alias: `conda env remove --name old_name`
+
+# export all envs
+
+#!/bin/bash
+
+NOW=$(date "+%Y-%m-%d")
+mkdir -p $HOME/tmp/envs-$NOW
+ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
+for env in $ENVS; do
+    source activate $env
+    conda env export > $HOME/tmp/envs-$NOW/$env.yml
+    echo "Exporting $env"
+done
