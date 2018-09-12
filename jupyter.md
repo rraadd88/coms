@@ -20,6 +20,7 @@ import socket
 socket.gethostname()
 
 # one jupyter session multiple environments
+
   source activate gen
   conda install pip
   conda install ipykernel
