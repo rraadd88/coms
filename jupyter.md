@@ -25,3 +25,10 @@ socket.gethostname()
     conda install pip
     conda install ipykernel
     python -m ipykernel install --user --name gen
+    
+    ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
+    for env in $ENVS; do
+        source activate $env
+        python -m ipykernel install --user --name $env
+        echo "$env"
+    done
