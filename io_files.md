@@ -14,48 +14,48 @@ find . -depth -empty >> test
 
 find . -type f -name "*O=A*" | xargs cp/mv/rm
 
-# for loop
-for line in $(cat test);
-do 
-mv $line empty_folders;
-done
+# for loop  
+for line in $(cat test);  
+do  
+mv $line empty_folders;  
+done  
 
-# sort
-sort -t, -nk3 user.csv
-,: delimiter
--n for numbers text nnthing
-k3: column 3
+# sort  
+sort -t, -nk3 user.csv  
+,: delimiter  
+-n for numbers text nnthing  
+k3: column 3  
 
-# only unique lines 
-sdiff -s file1 file2
+# only unique lines  
+sdiff -s file1 file2  
 
-# rename
+# rename  
 
-for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done
-for file in *; do mv "$file" `echo $file | tr '-' '_'` ; done
-for file in *; do mv "$file" `echo $file | tr ':' '_'` ; done
+for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done  
+for file in *; do mv "$file" `echo $file | tr '-' '_'` ; done  
+for file in *; do mv "$file" `echo $file | tr ':' '_'` ; done  
 
-ls -1 | while read file; do new_file=$(echo $file | sed s/\ //g); mv "$file" "$new_file"; done
+ls -1 | while read file; do new_file=$(echo $file | sed s/\ //g); mv "$file" "$new_file"; done  
 
-# rename dir and files 
-## remove spaces
+# rename dir and files   
+## remove spaces  
 
-find -name "* *" -type d | rename 's/ /_/g'
-find -name "* *" -type f | rename 's/ /_/g'
+find -name "* *" -type d | rename 's/ /_/g'  
+find -name "* *" -type f | rename 's/ /_/g'  
 
-find -name "*(*" -type f | rename 's/\(/_/g'
-find -name "*)*" -type f | rename 's/\)/_/g'
-find -name "*-*" -type f | rename 's/-/_/g'
-find -name "*'*" -type f | rename 's/'/_/g'
-find -name "*,*" -type f | rename 's/,/_/g'
-find -name "*!*" -type f | rename 's/!/_/g'
-find -name "*;*" -type f | rename 's/;/_/g'
-find -name "*"*" -type f | rename 's/"/_/g'
-find -name "***" -type f | rename 's/*/_/g'
-find -name "*>*" -type f | rename 's/>/_/g'
-find -name "*:*" -type f | rename 's/:/_/g'
-
-## replace filenames with numbers
+find -name "*(*" -type f | rename 's/\(/_/g'  
+find -name "*)*" -type f | rename 's/\)/_/g'  
+find -name "*-*" -type f | rename 's/-/_/g'  
+find -name "*'*" -type f | rename 's/'/_/g'  
+find -name "*,*" -type f | rename 's/,/_/g'  
+find -name "*!*" -type f | rename 's/!/_/g'  
+find -name "*;*" -type f | rename 's/;/_/g'  
+find -name "*"*" -type f | rename 's/"/_/g'  
+find -name "***" -type f | rename 's/*/_/g'  
+find -name "*>*" -type f | rename 's/>/_/g'  
+find -name "*:*" -type f | rename 's/:/_/g'  
+  
+## replace filenames with numbers  
 
 ls | cat -n | while read n f; do mv "$f" "$n.extension"; done
 
