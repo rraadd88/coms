@@ -32,3 +32,18 @@ socket.gethostname()
         python -m ipykernel install --user --name $env
         echo "$env"
     done
+    
+ # change font 
+ 
+    from IPython.core.display import HTML
+    HTML("""
+    <style>
+    div.output_area pre {
+        font-family: Consolas, monospace;
+    font-size: small;
+    }
+    table.dataframe {
+        font-family: Monaco;
+    }
+    </style>
+    """)
