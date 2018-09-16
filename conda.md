@@ -1,25 +1,28 @@
 #create venv
-conda create --name test python=3.6 biopython
-source activate test
-source deactivate
-conda info --envs
 
-#current venv
-conda list 
+    conda create --name test python=3.6 biopython
+    source activate test
+    source deactivate
+    conda info --envs
 
-#grep
-conda list -n test
+## current venv
+    conda list 
+
+## grep
+
+    conda list -n test
 
 # export and install
-conda env export | grep -v "^prefix: " > imaging.yml
 
-conda env create -f environment.yml
+    conda env export | grep -v "^prefix: " > imaging.yml
 
-conda env create --force -f 1_dms.yml
+    conda env create -f environment.yml
 
-#if error
+    conda env create --force -f 1_dms.yml
 
-conda env remove --name 1_dms
+# delete  
+
+    conda env remove --name name
 
 # clone env
 
