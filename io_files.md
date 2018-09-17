@@ -37,6 +37,7 @@ for file in *; do mv "$file" `echo $file | tr ':' '_'` ; done
 
 ls -1 | while read file; do new_file=$(echo $file | sed s/\ //g); mv "$file" "$new_file"; done  
 
+
 # rename dir and files   
 ## remove spaces  
 
@@ -60,6 +61,10 @@ find -name "*:*" -type f | rename 's/:/_/g'
 ls | cat -n | while read n f; do mv "$f" "$n.extension"; done
 
 eg. 1st 3 keep chars
+
+# find and delete
+
+  find -name "*:*" -type f | -exec rm -rf {} \;
 
 # gzip *
 ls *.gz | cat -n | while read n f; do mv "$f" ${f:0:3}"$n.gz"; done
