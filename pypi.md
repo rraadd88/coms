@@ -8,3 +8,6 @@ travis logon --pro
 # make a pypi secure password
 cd repository
 travis encrypt {pypi password without special chars}
+
+# Pro tip
+1. Never change github and pypi pws during buiding.
