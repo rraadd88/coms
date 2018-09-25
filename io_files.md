@@ -90,3 +90,7 @@ to create the list of directories, then
 
 xargs mkdir -p <dirs.txt
 to create the directories on the destination.
+
+# split a big file to chuncks
+
+split -a 4 -d -l 10000000 fn fn_
