@@ -94,3 +94,12 @@ to create the directories on the destination.
 # split a big file to chuncks
 
 split -a 4 -d -l 10000000 fn fn_
+
+# backup
+
+    date=$(date +%Y-%m-%d)
+    git_repo='prj'
+    #git clone ssh://user@ip/path/to/$git_repo
+    mv $git_repo $date"_"$git_repo
+    #du -h -a $date"_"$git_repo > $date"_"$git_repo".log"
+
