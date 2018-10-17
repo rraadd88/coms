@@ -98,3 +98,20 @@ git update-index --assume-unchanged FILE_NAME
 
 # grep before commit!
 git grep 'pw' .
+
+# local/ssh remote origin master
+
+## at remote origin master branch 
+
+  mkdir prj.git;cd prj.git;git init --bare
+
+## at downstream branch
+
+### to add link
+
+  git remote add origin ssh://usr@host:/path/prj.git
+
+### to change link
+
+  git remote set-url origin ssh://usr@host:/path/prj.git
+  git push origin master
