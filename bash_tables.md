@@ -16,6 +16,13 @@ awk -F'\t' '{if(int($5) >= 1 && int($5) != 255){print}}' little.sam
 
 ## Get unique values in a column
 
+1. `Awk`ward
+
+awk '!a[$1]++' <file
+
+
+2. Using `sort`
+
 ```
 sort -u -t, -k1,1 file
 ```
