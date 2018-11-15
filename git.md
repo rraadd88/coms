@@ -103,13 +103,20 @@ git grep 'pw' .
 
 ## at remote origin master branch 
 
-  mkdir prj.git;cd prj.git;git init --bare
+```  
+repon=prj
+mkdir $repon.git;cd $repon.git;git init --bare
+```
 
 ## at downstream branch
 
 ### to add link
 
-  git remote add origin ssh://usr@host:/path/prj.git
+```
+usr=usr;host=host;path=path;
+
+git remote add origin ssh://$usr@$host:/$path/$repon.git
+```
 
 ### to change link
 
