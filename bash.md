@@ -1,3 +1,9 @@
+# get live updates of a process
+
+```
+watch ls -ltr 
+```
+
 # troubleshoot crash
 
 Alt+F2 and if you get a dialog for executing commands type restart
