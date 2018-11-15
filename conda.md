@@ -46,3 +46,16 @@ for env in $ENVS; do
     conda env export | grep -v "^prefix: " > envs-$NOW/$env.yml
     echo "Exporting $env"
 done
+
+```
+#!/bin/bash
+
+mkdir -p envs
+ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
+for env in $ENVS; do
+    source activate $env
+    conda env export | grep -v "^prefix: " > envs/$env.yml
+    echo "Exporting $env"
+done
+
+```
