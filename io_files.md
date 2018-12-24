@@ -103,3 +103,8 @@ split -a 4 -d -l 10000000 fn fn_
     mv $git_repo $date"_"$git_repo
     du -h -a $date"_"$git_repo > $date"_"$git_repo".log"
 
+# split large file by line numbers
+split -l 20000000 --numeric-suffixes fp preffix
+
+# gzip individually
+gzip preffix*
