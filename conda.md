@@ -1,4 +1,4 @@
-## create venv
+## create venv   
 
     conda create --name test python=3.6 biopython
     source activate test
