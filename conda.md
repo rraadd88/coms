@@ -1,4 +1,4 @@
-#create venv
+## create venv
 
     conda create --name test python=3.6 biopython
     source activate test
@@ -6,13 +6,14 @@
     conda info --envs
 
 ## current venv
+
     conda list 
 
 ## grep
 
     conda list -n test
 
-# export and install
+## export and install
 
     conda env export | grep -v "^prefix: " > imaging.yml
 
@@ -20,42 +21,41 @@
 
     conda env create --force -f 1_dms.yml
 
-# delete  
+## delete env  
 
     conda env remove --name name
 
-# clone env
+## clone env
 
-conda create --name myclone --clone myenv
+    conda create --name myclone --clone myenv
 
-# rename env
+## rename env
 
-conda create --name new_name --clone old_name
+    conda create --name new_name --clone old_name
 
-conda remove --name old_name --all # or its alias: `conda env remove --name old_name`
+    conda remove --name old_name --all # or its alias: `conda env remove --name old_name`
 
-# export all envs
+## export all envs datewise
 
-#!/bin/bash
+    #!/bin/bash
 
-NOW=$(date "+%y_%m_%d")
-mkdir -p envs-$NOW
-ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
-for env in $ENVS; do
-    source activate $env
-    conda env export | grep -v "^prefix: " > envs-$NOW/$env.yml
-    echo "Exporting $env"
-done
+    NOW=$(date "+%y_%m_%d")
+    mkdir -p envs-$NOW
+    ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
+    for env in $ENVS; do
+        source activate $env
+        conda env export | grep -v "^prefix: " > envs-$NOW/$env.yml
+        echo "Exporting $env"
+    done
 
-```
-#!/bin/bash
+## export all envs namewise
 
-mkdir -p envs
-ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
-for env in $ENVS; do
-    source activate $env
-    conda env export | grep -v "^prefix: " > envs/$env.yml
-    echo "Exporting $env"
-done
+    #!/bin/bash
 
-```
+    mkdir -p envs
+    ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
+    for env in $ENVS; do
+        source activate $env
+        conda env export | grep -v "^prefix: " > envs/$env.yml
+        echo "Exporting $env"
+    done
