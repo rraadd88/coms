@@ -1,10 +1,12 @@
-# Add the signing key for the CRAN repositories (you can verify it here):
-
+# Add the signing key 
+## for the CRAN repositories 
+```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 If that fails, this way may work:
 
 gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
 gpg -a --export E084DAB9 | sudo apt-key add -
+```
 To activate the new software sources configuration, run:
 
 sudo apt-get update
