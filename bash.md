@@ -64,17 +64,17 @@
 Install an RPM Package on Ubuntu Linux
 Installing software on Ubuntu usually entails using Synaptic or by using an apt-get command from the terminal. Unfortunately, there are still a number of packages out there that are only distributed in RPM format.
 
-There’s a utility called Alien that converts packages from one format to the other. This doesn’t always mean that an rpm will work on your system, though. You will need to install some prerequisite software packages in order to install alien, however. These packages include gcc and make.
+There's a utility called Alien that converts packages from one format to the other. This doesn't always mean that an rpm will work on your system, though. You will need to install some prerequisite software packages in order to install alien, however. These packages include gcc and make.
 
 ## Run this command to install alien and other necessary packages:
 
     sudo apt-get install alien dpkg-dev debhelper build-essential
 
-## To convert a package from rpm to debian format, use this command syntax. The sudo may not be necessary, but we’ll include it just in case.
+## To convert a package from rpm to debian format, use this command syntax. The sudo may not be necessary, but we'll include it just in case.
 
     sudo alien packagename.rpm
 
-## To install the package, you’ll use the dpkg utility, which is the internal package management tool behind debian and Ubuntu.
+## To install the package, you'll use the dpkg utility, which is the internal package management tool behind debian and Ubuntu.
 
     sudo dpkg -i packagename.deb
 
@@ -104,4 +104,3 @@ Where user is your username within the VM.
 
 ## more system wide (for usage through python scripts)
     sudo cp localscript /usr/local/bin/
-
