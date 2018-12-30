@@ -1,16 +1,16 @@
-# download youtube
+## download youtube
 
 ## list formats
-youtube-dl -F lnk
+    youtube-dl -F lnk
 
 ## choose format
-youtube-dl -f <18> lnk
+    youtube-dl -f <18> lnk
 
 ## list subtitles
-youtube-dl -list-subs lnk
+    youtube-dl -list-subs lnk
 
 ## get subtitles
-youtube-dl --all-subs --skip-download lnk
+    youtube-dl --all-subs --skip-download lnk
 
 ## translate subtitles
-trans -b file:///home/->file.vtt > file.en.vtt
+    trans -b file:///home/->file.vtt > file.en.vtt
