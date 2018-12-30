@@ -108,3 +108,11 @@
 
 ## gzip individually
     gzip preffix*
+    
+## compress folder
+    tar -zcvf archive-name.tar.gz directory-name
+    Where,
+    -z : Compress archive using gzip program
+    -c : Create archive
+    -v : Verbose i.e display progress while creating archive
+    -f : Archive File name
