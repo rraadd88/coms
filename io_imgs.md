@@ -1,23 +1,23 @@
-# clipboard (screenshot) to image
+## clipboard (screenshot) to image
 
 	xclip -selection clipboard -t TARGETS -o
 	xclip -selection clipboard -t image/png -o > /tmp/avatar.png
 
 	scrot -s test.png
 
-# convert: jpg to pdf
+## convert: jpg to pdf
 
 	convert -compress jpeg passbook.jpg passbook.pdf
 
-# convert: append images vertically
+## convert: append images vertically
 
 	convert -append 2.png 1.png out.png
 
-# convert: append images horizontally
+## convert: append images horizontally
 
 	convert +append 2.png 1.png out.png
 
-# convert: make gif  
+## convert: make gif  
 
 	convert -delay 100 -loop 0 2016102* output.gif
 
@@ -40,12 +40,12 @@
 	#ffmpeg: synfig
 	ffmpeg -r 15 -i filename.%04d.png -vb 20M -f flv mt.flv
 
-# compress pdf   
+## compress pdf   
 
 	pdf2ps 12th.pdf 12th.ps
 	ps2pdf 12th.ps 12th.pdf
 
-# convert to png
+## convert to png
 
 	#!/bin/bash
 
@@ -66,12 +66,13 @@
 	# -resize 800 
 	# -verbose
 	
-# vector to raster  
+## vector to raster  
+
 ## convert to 300dpi, max 2000px width, no alpha,
 
 	for f in *.svg; do convert -density 500 -alpha off -resize '2000' -trim "$f" "${f%%.*}.png"; done
 
-# check the format of the images (NOT RELIABLE, check in gimp to be sure)
+## check the format of the images (NOT RELIABLE, check in gimp to be sure)
 
 	for f in *.tif; do identify -ping -format '%w %h %[channels]\n' "$f"; done
 
@@ -83,7 +84,7 @@
 
 	inkscape -z in.svg -e out.png
 
-# TIF (NOT RELIABLE, do in gimp to be sure)  
+## TIF (NOT RELIABLE, do in gimp to be sure)  
 ## compress
 
 	for f in *.svg; do convert -density 300 -alpha off -resize '2000' -compress lzw "$f" "${f%%.*}.tif"; done
