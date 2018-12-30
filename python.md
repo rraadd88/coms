@@ -1,20 +1,19 @@
-# install pkg in editing mode
-pip install -e .
-or: python setup.py develop
+## install pkg in editing mode
+    pip install -e .
+    or: python setup.py develop
 
-# get version 
-pip show pkg
+## get version 
+    pip show pkg
 
-# list all packages installed
-pip freeze
+## list all packages installed
+    pip freeze
 
-# python setup.py sdist
+## python setup.py sdist
 
-# python -m compileall .
+    python -m compileall .
 
-# install all packages from a list at once
-pip install -r requirements.txt
+## install all packages from a list at once
+    pip install -r requirements.txt
 
-# Troubleshoot  
-## SSL errors, certificate invalid  
-pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org package  
+# Troubleshoot: SSL errors, certificate invalid  
+    pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org package  
