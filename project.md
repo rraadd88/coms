@@ -1,5 +1,3 @@
-Set-up snakemake 
+ ## Set-up snakemake 
 
-```
-cookiecutter https://github.com/snakemake-workflows/cookiecutter-snakemake-workflow.git
-```
+    cookiecutter https://github.com/snakemake-workflows/cookiecutter-snakemake-workflow.git
