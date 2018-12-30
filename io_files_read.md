@@ -1,3 +1,3 @@
 ## read without extracting
 
-gzip -cd file.tar.gz | head
+    gzip -cd file.tar.gz | head
