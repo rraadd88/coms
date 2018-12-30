@@ -1,2 +1,2 @@
 ## resize virt os size
-VBoxManage modifyhd w7.vdi --resize 80000
+    VBoxManage modifyhd w7.vdi --resize 80000
