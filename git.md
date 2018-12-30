@@ -17,7 +17,7 @@
     git status
 
 ## commit
-
+    
     git commit -m "tag" fn
     
 ## push    
