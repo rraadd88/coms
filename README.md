@@ -1,8 +1,5 @@
-# coms
-stuff and such.
+## coms
 
-```
-fn: context eg. bash 
-##: function eg. move file
-```{}```: command eg. mv *
-```
+    fn: context eg. bash 
+    ##: function eg. move file
+    ```{}```: command eg. mv *
