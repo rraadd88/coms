@@ -64,7 +64,7 @@
 
 ## find and delete
 
-    find -name "*:*" -type f | -exec rm -rf {} \;
+    find -name "*:*" -type f -exec rm -rf {} \;
 
 ## gzip all files
 
