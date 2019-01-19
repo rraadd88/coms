@@ -25,7 +25,7 @@
 
     conda env remove --name name
 
-## clone env
+## clone (copy) env
 
     conda create --name myclone --clone myenv
 
