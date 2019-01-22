@@ -68,6 +68,10 @@
 	
 ## vector to raster  
 
+## svg to 1000px width, no alpha,
+
+	rsvg -w 1000 fn.svg fn.png
+
 ## convert to 300dpi, max 2000px width, no alpha,
 
 	for f in *.svg; do convert -density 500 -alpha off -resize '2000' -trim "$f" "${f%%.*}.png"; done
@@ -88,3 +92,7 @@
 ## compress
 
 	for f in *.svg; do convert -density 300 -alpha off -resize '2000' -compress lzw "$f" "${f%%.*}.tif"; done
+
+## install `rsvg`
+
+	sudo apt install librsvg2-bin
