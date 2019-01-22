@@ -71,6 +71,10 @@
 ## svg to 1000px width, no alpha,
 
 	rsvg -w 1000 fn.svg fn.png
+	
+## svg to 1000px width, no alpha, loop	
+
+	for f in *.svg; do rsvg -w 1000 "$f" "${f%%.*}.png"; done
 
 ## convert to 300dpi, max 2000px width, no alpha,
 
