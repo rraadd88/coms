@@ -42,8 +42,8 @@
 
 ## compress pdf   
 
-	pdf2ps 12th.pdf 12th.ps
-	ps2pdf 12th.ps 12th.pdf
+	ps2pdf fn.pdf fn.pdf
+	for f in med*.pdf; do ps2pdf $f $f.small.pdf; done;
 
 ## convert to png
 
