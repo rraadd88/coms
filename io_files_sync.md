@@ -4,11 +4,13 @@
 
     https://github.com/astrada/google-drive-ocamlfuse
 
-## Mount
+## init
 
     google-drive-ocamlfuse
 
-    google-drive-ocamlfuse {folder}
+## mount/sync
+
+    google-drive-ocamlfuse -verbose -f {folder}
 
 ## Unmount
 
