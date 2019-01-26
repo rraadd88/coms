@@ -22,7 +22,6 @@
 ## one jupyter session multiple environments
 
     source activate gen
-    conda install pip
     conda install ipykernel
     python -m ipykernel install --user --name gen
     
