@@ -35,8 +35,43 @@
 ## update fork
     git remote -v
     git remote add upstream https://github.com/rraadd88/dms2dfe.git
-    git fetch upstream
-    git rebase upstream/master
+    git fetch upstream;git rebase upstream/master
+    git push origin master
+
+## update fork with github UI
+
+    Step 1: New PR
+    Go to your own fork’s UI, and click the “New Pull Request” button:
+
+    New Pull Request Button
+
+    This will take you to a screen not too different from this one:
+
+    PR create screen
+
+    Step 2: Base Switch
+    If the option to try “switching the base” is there, click that.
+
+    Switching the base option
+
+    If the option isn’t there, switch the bases manually by using the provided dropdowns, and set them up so that your fork is on the left, and the original is on the right, like so:
+
+    Switched sources
+
+    Step 3: Send and Merge
+    Click the green “Create Pull Request” button. In the input fields that appear, give it a title like “Syncing from original”. Optionally, add a description.
+
+    Create a new pull request
+
+    Again, click the “Create Pull Request” button to actually send the PR. The result should be a typical PR screen:
+
+    PR screen with Merge button
+
+    Feel free to merge it with the “Merge Pull Request” button (and “Confirm Merge” afterwards), and you’re done!
+
+    Merged PR
+
+    Done!
 
 ## update branch
     git pull
