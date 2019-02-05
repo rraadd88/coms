@@ -61,3 +61,7 @@
     png("test.png",height = 4, units = 'in', res = 300)
     library(png); library(grid); img <- readPNG("../plots/fig1.png");  grid.raster(img)
     dev.off()
+    
+## install R from conda
+
+    conda install -c r rstudio
