@@ -62,6 +62,8 @@
     library(png); library(grid); img <- readPNG("../plots/fig1.png");  grid.raster(img)
     dev.off()
     
-## install R from conda
+## jupyter
 
-    conda install -c r rstudio
+    install.packages(c('repr', 'IRdisplay', 'pbdZMQ', 'devtools')) 
+    devtools::install_github('IRkernel/IRkernel') 
+    IRkernel::installspec() # to register the kernel in the current R installation
