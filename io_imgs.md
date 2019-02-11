@@ -68,6 +68,10 @@
 	
 ## vector to raster  
 
+## inkscape 
+
+	inkscape "$pdf" -z --export-dpi=600 --export-area-drawing --export-png="$pngfile"
+
 ## svg to 1000px width, no alpha,
 
 	rsvg -w 1000 fn.svg fn.png
