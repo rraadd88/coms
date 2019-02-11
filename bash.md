@@ -104,3 +104,7 @@ Where user is your username within the VM.
 
 ## more system wide (for usage through python scripts)
     sudo cp localscript /usr/local/bin/
+    
+## search installed packages
+
+    dpkg-query --list | grep magick
