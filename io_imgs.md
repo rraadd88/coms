@@ -70,7 +70,8 @@
 
 ## inkscape 
 
-	inkscape "$pdf" -z --export-dpi=600 --export-area-drawing --export-png="$pngfile"
+	for f in *.pdf; do inkscape "$f"  -z --export-dpi=600 --export-area-drawing --export-png="${f%%.*}.png"; done
+	
 
 ## svg to 1000px width, no alpha,
 
