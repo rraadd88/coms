@@ -133,6 +133,10 @@
     git push origin :refs/tags/old
     git push --tags
 
+## remove tag from remote
+
+    git push --delete origin old
+
 ## undo last commit
     git reset --hard HEAD~
 
