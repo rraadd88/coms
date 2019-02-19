@@ -1,11 +1,3 @@
-## retriive lines between
-
-    sed -n '98121,98130 p' test/c1_01_qcd.sam > file
-
-## pattern match @ line
-    grep -Hrn pattern file
-
-
 ## find
 
     find . -name "foo*"
@@ -20,15 +12,6 @@
     do  
     mv $line empty_folders;  
     done  
-
-## sort  
-    sort -t, -nk3 user.csv  
-    ,: delimiter  
-    -n for numbers text nnthing  
-    k3: column 3  
-
-## only unique lines  
-    sdiff -s file1 file2  
 
 ## rename  
 
@@ -91,10 +74,6 @@
 
     xargs mkdir -p <dirs.txt
 
-## split a big file to chuncks
-
-    split -a 4 -d -l 10000000 fn fn_
-
 ## backup
 
     date=$(date +%Y-%m-%d)
@@ -102,9 +81,6 @@
     git clone ssh://user@ip/path/to/$git_repo
     mv $git_repo $date"_"$git_repo
     du -h -a $date"_"$git_repo > $date"_"$git_repo".log"
-
-## split large file by line numbers
-    split -l 20000000 --numeric-suffixes fp preffix
 
 ## gzip individually
     gzip preffix*
