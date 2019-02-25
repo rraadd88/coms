@@ -13,6 +13,19 @@
     mv $line empty_folders;  
     done  
 
+## for loop  
+    for line in $(cat test);  do  
+        if [[ $f == *.yml ]]; then
+            mv $line empty_folders; 
+        fi
+    done  
+
+## substring
+
+    if [[ $f == *.yml ]]; then 
+        action $f ; 
+    fi; 
+
 ## rename  
 
     for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done  
