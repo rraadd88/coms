@@ -23,7 +23,7 @@
 
 ## delete env  
 
-    conda env remove --name name --all
+    conda remove --name name --all
 
 ## clone (copy) env
 
