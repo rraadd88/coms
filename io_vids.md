@@ -12,5 +12,9 @@
 ## get subtitles
     youtube-dl --all-subs --skip-download lnk
 
+## get audio only  
+    youtube-dl -f 140 link
+
 ## translate subtitles
     trans -b file:///home/->file.vtt > file.en.vtt
+    
