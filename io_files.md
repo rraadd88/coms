@@ -105,3 +105,7 @@
     -c : Create archive
     -v : Verbose i.e display progress while creating archive
     -f : Archive File name
+
+## get the number of file format counts in subdirs
+
+    ls -R . | awk -F . '{print $NF}' | sort | uniq -c | awk '{print $2,$1}' | sort -k2 -n
