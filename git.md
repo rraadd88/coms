@@ -121,11 +121,8 @@
 
 ## tagging:1. bump version no. in the setup.py
 
-    git add setup.py
-    git commit -m "version bump"
-    git push origin master
-    git tag -a v$(python setup.py --version) -m "Update"
-    git push --tags
+    git commit -am "version bump";git push origin master
+    git tag -a v$(python setup.py --version) -m "Update";git push --tags
 
 ## rewrite old tags
     git tag new old
