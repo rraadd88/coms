@@ -1,3 +1,11 @@
+## 2to3 
+    
+    2to3 -w BAGEL.py
+
+## repair scripts (tabs and spaces)
+    
+    autopep8 -i BAGEL.py
+    
 ## install pkg in editing mode
     pip install -e .
     or: python setup.py develop
