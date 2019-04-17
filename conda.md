@@ -59,3 +59,7 @@
         conda env export | grep -v "^prefix: " > envs/$env.yml
         echo "Exporting $env"
     done
+
+## update or repair if broken
+    
+    bash Anaconda3-5.2.0-Linux-x86_64.sh -u
