@@ -161,3 +161,7 @@
 
     git remote set-url origin ssh://usr@host:/path/prj.git
     git push origin master
+
+## merge in a direction
+
+    git checkout --{ours/theirs} path/to/conflict-file
