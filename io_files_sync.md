@@ -15,3 +15,7 @@
 ## Unmount
 
     fusermount -u {folder}
+
+## rsync from to
+
+    rsync -zarv --include='*.ipynb' --include='*.py' --include='*/' --exclude="*" /media/rohan/tnetennba/Documents/propropro/writ/prjs/03heterodim/code  .
