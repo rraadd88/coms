@@ -145,21 +145,27 @@
 
 ## local/ssh remote origin master
 
-## at remote origin master branch 
+### at remote origin master branch 
 
     repon=prj
     mkdir $repon.git;cd $repon.git;git init --bare
+    # get the full path
+    pwd
 
-## at downstream branch
+### at downstream branch
 
-## to add link
+### to add link
+    
+    usr=
+    host=
+    path=
+    git remote add origin ssh://$usr@$host:/$path
+    git push origin master
 
-    usr=usr;host=host;path=path;
-    git remote add origin ssh://$usr@$host:/$path/$repon.git
+### to change link
 
-## to change link
-
-    git remote set-url origin ssh://usr@host:/path/prj.git
+    path=
+    git remote set-url origin ssh://$usr@$host:/$path
     git push origin master
 
 ## merge in a direction
