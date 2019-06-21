@@ -63,3 +63,8 @@
 ## update or repair if broken
     
     bash Anaconda3-5.2.0-Linux-x86_64.sh -u
+    
+## update existing env
+
+    conda activate env
+    conda env update --file env.yml
