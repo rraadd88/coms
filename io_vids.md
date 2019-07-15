@@ -18,3 +18,5 @@
 ## translate subtitles
     trans -b file:///home/->file.vtt > file.en.vtt
     
+## update ydl
+    sudo youtube-dl -U
