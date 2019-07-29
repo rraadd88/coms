@@ -9,6 +9,11 @@
 
 	convert -compress jpeg passbook.jpg passbook.pdf
 
+## compress pdf
+
+	pdfjam --outfile $f --papersize '{80mm,50mm}' $f.resized.pdf
+	convert -density 400 $f.resized.pdf -compress JPEG $f.compressed.pdf	
+
 ## convert: append images vertically
 
 	convert -append 2.png 1.png out.png
