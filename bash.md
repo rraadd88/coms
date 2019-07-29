@@ -107,4 +107,5 @@ Where user is your username within the VM.
     
 ## search installed packages
 
+    apt list --installed | grep magick
     dpkg-query --list | grep magick
