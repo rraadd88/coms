@@ -50,3 +50,7 @@
     perl prinseq-graphs.pl -i $file.gd -png_all -o $file
     perl prinseq-graphs.pl -i $file.gd -html_all -o $file
     done
+
+## QC:fastqc
+
+    fastqc -f fastq --extract -o {outdir} f1.fasta f2.fasta ..
