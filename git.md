@@ -171,3 +171,7 @@
 ## merge in a direction
 
     git checkout --{ours/theirs} path/to/conflict-file
+
+## search lost code in older commits
+
+    git grep regex $(git rev-list --all)
