@@ -109,3 +109,7 @@
 ## get the number of file format counts in subdirs
 
     ls -R . | awk -F . '{print $NF}' | sort | uniq -c | awk '{print $2,$1}' | sort -k2 -n
+
+## zip folders and files
+
+    zip -r 2019-10-28__name.zip fn.fastq.gz folder/folder/* file.tsv
