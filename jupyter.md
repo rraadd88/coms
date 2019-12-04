@@ -1,3 +1,7 @@
+## grep all `ipynb`s in subdirectories
+
+    find . -name "*.ipynb" | xargs nbgrep "heatmap"
+    
 ## Start the IPython kernel on the server with the following options:
 
     ipython notebook --no-browser --port=7000
