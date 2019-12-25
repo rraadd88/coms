@@ -110,3 +110,7 @@
 ## install `rsvg`
 
 	sudo apt install librsvg2-bin
+	
+## png to ico
+
+	convert -resize x32 -gravity center -crop 32x32+0+0 email.png -flatten -colors 256 -background transparent email.ico
