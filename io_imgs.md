@@ -114,3 +114,11 @@
 ## png to ico
 
 	convert -resize x32 -gravity center -crop 32x32+0+0 email.png -flatten -colors 256 -background transparent email.ico
+
+## pdf to image of individual page
+	
+	convert -density 300 in.pdf page_%04d.svg
+
+## pdf to pages
+	
+	pdftk in.pdf burst output page_%04d.pdf
