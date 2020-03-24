@@ -109,3 +109,6 @@ Where user is your username within the VM.
 
     apt list --installed | grep magick
     dpkg-query --list | grep magick
+
+## search for running commands 
+    pgrep -f 'wget' | xargs ps -f -p
