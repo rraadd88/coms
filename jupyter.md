@@ -50,3 +50,10 @@
     }
     </style>
     """)
+
+## enable tqdm in jupyterlab
+    #usual installation 
+    pip install ipywidgets 
+    jupyter nbextension enable --py widgetsnbextension
+    #you are my saver!
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager    
