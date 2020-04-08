@@ -31,7 +31,7 @@
     -t, so comma is the delimiter
     -k1,1 for the key field 1
 
-## Match one of multiple patterns
+## Match any of multiple patterns
 
     grep '001147\|Talon\|Ale' little.sam
 
