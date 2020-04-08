@@ -10,6 +10,11 @@
     
     - get only the reads for which column #5 values (int) are greater than 1 and not equal to 255  
 
+## Use shell variable in awk
+
+   name="sam"
+   awk -v var="$name" 'BEGIN {name,$1,$2}' little.sam 
+
 ## Get unique values in a column
 
 ## 1. `Awk`ward
