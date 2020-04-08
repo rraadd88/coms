@@ -12,8 +12,9 @@
 
 ## Use shell variable in awk
 
-   name="sam"
-   awk -v var="$name" 'BEGIN {name,$1,$2}' little.sam 
+    name="sam"
+
+    awk -v var="$name" 'BEGIN {name,$1,$2}' little.sam 
 
 ## Get unique values in a column
 
