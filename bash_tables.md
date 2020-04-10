@@ -40,5 +40,5 @@
     if [ -f "./folder/file_name_"$FILE ]
       then echo "The file '$FILE' exists."
     else
-      echo "The file '$FILE' in not found."
+      echo "The file '$FILE' not found."
     fi
