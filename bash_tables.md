@@ -35,3 +35,10 @@
 
     grep '001147\|Talon\|Ale' little.sam
 
+## Check if file exists
+
+    if [ -f "./folder/file_name_"$FILE ]
+      then echo "The file '$FILE' exists."
+    else
+      echo "The file '$FILE' not found."
+    fi
