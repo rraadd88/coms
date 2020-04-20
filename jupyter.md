@@ -1,3 +1,23 @@
+## jupyterlab keyboard shortcut to move cells
+
+    {"shortcuts": [
+            {
+                "command": "notebook:move-cell-up",
+                "keys": [
+                    "Alt ArrowUp"
+                ],
+                "selector": ".jp-Notebook:focus"
+            },  
+            {
+                "command": "notebook:move-cell-down",
+                "keys": [
+                    "Alt ArrowDown"
+                ],
+                "selector": ".jp-Notebook:focus"
+            },  
+        ]
+    }
+    
 ## grep all `ipynb`s in subdirectories
 
     find . -name "*.ipynb" | xargs nbgrep "heatmap"
