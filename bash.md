@@ -112,3 +112,19 @@ Where user is your username within the VM.
 
 ## search for running commands 
     pgrep -f 'wget' | xargs ps -f -p
+
+## tmux create named session:
+
+    tmux new -s myname
+
+## tmux list sessions:
+
+    tmux ls
+    
+## tmux attach to named:
+
+    tmux a -t myname
+
+## tmux kill session:
+
+    tmux kill-session -t myname
