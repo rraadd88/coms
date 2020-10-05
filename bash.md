@@ -141,3 +141,19 @@ Where user is your username within the VM.
 
     Merge several pdfs into one
     pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
+
+## tmux create named session:
+
+    tmux new -s myname
+
+## tmux list sessions:
+
+    tmux ls
+    
+## tmux attach to named:
+
+    tmux a -t myname
+
+## tmux kill session:
+
+    tmux kill-session -t myname
