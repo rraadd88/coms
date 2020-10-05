@@ -25,3 +25,8 @@
 
 # Troubleshoot: SSL errors, certificate invalid  
     pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org package  
+
+# Increasing code performance through caching decorator, which wraps a function with a memoizing callable that saves up to the maxsize most recent calls (default: 128).
+
+    @lru_cache()
+    def function():

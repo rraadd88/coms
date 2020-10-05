@@ -15,9 +15,9 @@
 
 ## export and install
 
-    conda env export | grep -v "^prefix: " > imaging.yml
+    conda env export > imaging.yml
 
-    conda env create -f environment.yml
+    conda env create -n env_name -f env.yml
 
     conda env create --force -f 1_dms.yml
 

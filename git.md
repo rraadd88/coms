@@ -175,3 +175,8 @@
 ## search lost code in older commits
 
     git grep regex $(git rev-list --all)
+
+## check the size of the git repo
+
+    git count-objects -v
+    # size-pack : disk space in bytes 

@@ -119,6 +119,10 @@
 	
 	convert -density 300 in.pdf page_%04d.svg
 
+## reduce the width of bigger files only
+	
+	convert -resize 1500\> in out
+
 ## pdf to pages
 	
 	pdftk in.pdf burst output page_%04d.pdf

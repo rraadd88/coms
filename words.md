@@ -1,1 +1,0 @@
-comme ci comme ça: Neither good nor bad; so so; tolerable, passable, indifferent.

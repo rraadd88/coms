@@ -113,6 +113,7 @@ Where user is your username within the VM.
 ## search for running commands 
     pgrep -f 'wget' | xargs ps -f -p
 
+
 ## running docker container
 
     docker pull docker_container_name
@@ -141,6 +142,7 @@ Where user is your username within the VM.
 
     Merge several pdfs into one
     pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
+
 
 ## tmux create named session:
 
