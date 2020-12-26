@@ -18,4 +18,4 @@
 
 ## rsync from to
 
-    rsync -zarv --include='*.ipynb' --include='*.py' --include='*/' --exclude="*" /media/rohan/tnetennba/Documents/propropro/writ/prjs/03heterodim/code  .
+    rsync -zarv --no-links --include='*.ipynb' --include='*.py' --include='*/' --exclude="*" from/  to/
