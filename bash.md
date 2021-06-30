@@ -113,6 +113,37 @@ Where user is your username within the VM.
 ## search for running commands 
     pgrep -f 'wget' | xargs ps -f -p
 
+
+## running docker container
+
+    docker pull docker_container_name
+    docker run docker_container_name program_name options
+
+    List all images on your system:
+    docker images
+
+    List all containers you ran:
+    docker ps -a
+
+    Clean all the containers:
+    docker container prune
+
+    Remove a specific container:
+    docker rm container_ID
+
+## Manipulating pdf
+
+    Extract comments from pdf to txt
+    pdfcomments <infile.pdf> <outfile.txt>
+
+    Extract pages from pdf
+    pdftk myoldfile.pdf cat 1-2 4-5 output mynewfile.pdf
+    pdftk myoldfile.pdf cat 1 2 4 5 output mynewfile.pdf
+
+    Merge several pdfs into one
+    pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
+
+
 ## tmux create named session:
 
     tmux new -s myname
